@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Habilis-β">
+  <meta name="keywords" content="Vision-Language-Action Models, Continuous-Run Evaluation, Productivity–Reliability Plane, Fast-Motion, Long-Lasting, On-Device, Rectified Flow, Play Data, Cyclic Data">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Habilis-β: A Fast-Motion and Long-Lasting On-Device Vision-Language-Action Model</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./assets/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./assets/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="icon" href="./assets/images/logo.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./assets/js/fontawesome.all.min.js"></script>
+  <script src="./assets/js/bulma-carousel.min.js"></script>
+  <script src="./assets/js/bulma-slider.min.js"></script>
+  <script src="./assets/js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> <!--MathJax-->
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://tommoro.ai">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://tommoro.ai">
+            Coming Soon
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <!-- Title -->
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Habilis-β: A Fast-Motion and Long-Lasting On-Device Vision-Language-Action Model</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://tommoro.ai">Tommoro Robotics</a><sup>1</sup>,</span>
+            <span class="author-block">
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- ArXiv Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link -->
+              <span class="link-block">
+                <a href="https://github.com/Tommoro-AI/habilis_beta_robotwin"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <!--/ Title -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce Habilis-β, a fast-motion, long-lasting, and on-device vision-language-action (VLA) model designed for real-world deployment. 
+            Current VLA evaluation remains largely confined to single-trial success rates under curated resets, which fails to capture the fast-motion and long-lasting capabilities essential for practical operation. 
+            To address this, we introduce the Productivity–Reliability Plane (PRP) evaluating performance through Tasks per Hour (TPH) and Mean Time Between Intervention (MTBI) under a continuous-run protocol that demands both high-speed execution and sustained robustness. 
+            Habilis-β achieves high-performance by integrating language-free pre-training on large-scale play data for robust interaction priors with post-training on cyclic demonstrations that capture state drift across consecutive task iterations. 
+            The system further employs ESPADA for phase-adaptive motion shaping to accelerate free-space transit, utilizes rectified-flow distillation to enable high-frequency control on edge devices, and incorporates classifier-free guidance (CFG) as a deployment-time knob to dynamically balance instruction adherence and learned interaction priors. 
+            In 1-hour continuous-run evaluations, Habilis-β significantly outperforms π<sub>0.5</sub> in both simulation and real-world environments. 
+            In simulation, Habilis-β improves MTBI to 39.2s and TPH to 572.6 (from 30.5s and 120.5 for π<sub>0.5</sub>), while on a real-world humanoid logistics workflow, it achieves 137.4s MTBI and 124 TPH, surpassing π<sub>0.5</sub>'s 46.1s MTBI and 19 TPH. Finally, Habilis-β achieves the highest reported performance on the standard RoboTwin 2.0 leaderboard across representative tasks, validating its effectiveness in complex manipulation scenarios.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract -->
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!--/ Video Carousel -->
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-dbb">
+          <video poster="" id="dbb" autoplay controls muted loop playsinline height="100%">
+            <source src="./assets/videos/sim_dbb.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-pds">
+          <video poster="" id="pds" autoplay controls muted loop playsinline height="100%">
+            <source src="./assets/videos/sim_pds.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-sbt">
+          <video poster="" id="dbb" autoplay controls muted loop playsinline height="100%">
+            <source src="./assets/videos/sim_sbt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Video Carousel -->
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Paper Video -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="./assets/videos/real_pnp.mp4"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper Video -->
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <!-- BibTex -->
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">BibTeX</h2>
+    <pre><code>@article{tr2026habilisbeta,
+      author    = {Tommoro Robotics},
+      title     = {Habilis-β: A Fast-Motion and Long-Lasting On-Device Vision-Language-Action Model},
+      year      = {2026},
+    }</code></pre>
+  </div>
+  <!--/ BibTex -->
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- Paper Link -->
+      <a class="icon-link"
+         href="./assets/files/paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <!-- GitHub Link -->
+      <a class="icon-link" href="https://github.com/Tommoro-AI/habilis_beta_robotwin" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website template from <a href="https://nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
