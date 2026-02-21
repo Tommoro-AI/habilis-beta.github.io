@@ -462,9 +462,13 @@ figcaption {
 /* ===== PRP Figure ===== */
 .content .prp-figure,
 .prp-figure {
+  display: block;
   width: 70%;
   max-width: 1000px;
-  margin: 1.5rem auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .prp-figure img {
@@ -493,7 +497,7 @@ html, body {
 /* ===== Responsive: Tablet & Below (max 768px) ===== */
 @media screen and (max-width: 768px) {
   .container {
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   .hero.is-primary-gradient .publication-title {
@@ -530,12 +534,15 @@ html, body {
 
   .content .prp-figure,
   .prp-figure {
-    width: 100%;
-    margin: 1rem auto;
+    width: 85%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   .tabs.is-pill {
-    overflow: hidden !important;
+    overflow: clip !important;
     max-width: 100%;
     box-sizing: border-box;
   }
